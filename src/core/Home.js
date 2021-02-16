@@ -6,8 +6,8 @@ import Base from "./Base";
 export default function Home() {
   console.log("API LA ::", API);
   return (
-    <Base title="Home Page">
-      <div className="row justify-content-around">
+    <Base title="Home Page" description="Welcome to Tshirt store">
+      <div className="row ">
         <div className="col-4">
           <button className="btn btn-success">TEST</button>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Menu from "./Menu";
 
 export default function Base({
   title = "My Title",
@@ -8,6 +9,7 @@ export default function Base({
 }) {
   return (
     <div>
+      <Menu />
       <div className="container-fluid">
         <div className="jumbotron  text-white text-center">
           <h2 className="display-4">{title}</h2>
@@ -17,11 +19,7 @@ export default function Base({
       </div>
       <footer className="footer  mt-auto py-3">
         <div className="container-fluid bg-success text-white text-center py-3">
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            sint earum quasi harum consequatur doloribus nam et hic quae
-            inventore?
-          </h1>
+          <h1>If you got any question, feel free to reach out!</h1>
           <button className="btn btn-warning btn-lg">Contect us</button>
         </div>
         <div className="container">
