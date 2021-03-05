@@ -10,6 +10,12 @@ import PrivateRoute from "./auth/helper/PrivateRoutes";
 import AdminDashBoard from "./user/AdminDashBoard";
 import UserDashBoard from "./user/UserDashBoard";
 import AddCategory from "./admin/AddCategory";
+import ManageCategories from "./admin/ManageCategories";
+import AddProduct from "./admin/AddProduct";
+import ManageProducts from "./admin/ManageProducts";
+import { updateProduct } from "./admin/helper/adminapicall";
+import UpdateProduct from "./admin/UpdateProduct";
+import Cart from "./core/Cart";
 
 function Routes() {
   return (
@@ -18,6 +24,7 @@ function Routes() {
         <Route path="/" exact component={Home} />
         <Route path="/signup" exact component={Signup} />
         <Route path="/signin" exact component={Signin} />
+        <Route path="/cart" exact component={Cart} />
 
         {/* Private own created routes  */}
         <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
@@ -28,6 +35,19 @@ function Routes() {
           path="/admin/create/category"
           exact
           component={AddCategory}
+        />
+        <AdminRoute
+          path="/admin/categories"
+          exact
+          component={ManageCategories}
+        />
+        <AdminRoute path="/admin/products" exact component={ManageProducts} />
+        <AdminRoute path="/admin/create/product" exact component={AddProduct} />
+
+        <AdminRoute
+          path="/admin/product/update/:productId"
+          exact
+          component={UpdateProduct}
         />
       </Switch>
     </Router>

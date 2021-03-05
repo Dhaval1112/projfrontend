@@ -18,6 +18,11 @@ function AdminDashBoard() {
           </Link>
         </li>
         <li className="list-group-item">
+          <Link to="/admin/categories" className="nav-link text-success">
+            Manage Categories
+          </Link>
+        </li>
+        <li className="list-group-item">
           <Link to="/admin/create/product" className="nav-link text-success">
             Create Product
           </Link>
@@ -27,6 +32,13 @@ function AdminDashBoard() {
             Manage Products
           </Link>
         </li>
+
+        <li className="list-group-item">
+          <Link to="/admin/create/product" className="nav-link text-success">
+            Create Product
+          </Link>
+        </li>
+
         <li className="list-group-item">
           <Link to="/admin/orders" className="nav-link text-success">
             Create Orders
@@ -35,6 +47,7 @@ function AdminDashBoard() {
       </ul>
     </div>
   );
+
   const adminRightSide = () => (
     <div className="card mb-4">
       <h4 className="card-header">Admin Information</h4>

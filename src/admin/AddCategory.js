@@ -85,7 +85,8 @@ function AddCategory() {
         <div className="col-md-8 offset-md-2">
           {successMessage()}
           {warningMessage()}
-          {myCategoryForm()} {goBack()}
+          {myCategoryForm()}
+          {goBack()}
         </div>
       </div>
     </Base>
