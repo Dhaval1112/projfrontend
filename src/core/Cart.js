@@ -5,6 +5,7 @@ import Base from "./Base";
 import Card from "./Card";
 import { loadCart } from "./helper/cardHelper";
 import getProducts from "./helper/coreapicalls";
+import PaymentBraintree from "./PaymentBraintree";
 import StripeCheckout from "./StripeCheckout";
 
 const Cart = () => {
@@ -15,7 +16,7 @@ const Cart = () => {
     setProducts(loadCart());
   }, [reload]);
 
-  const loadAllProducts = () => {
+  const loadAllProducts = (products) => {
     return (
       <div>
         <h2>This section is to load products</h2>
@@ -48,13 +49,17 @@ const Cart = () => {
       <div className="row text-center">
         <div className="col-6">
           {products.length != 0 ? (
-            loadAllProducts()
+            loadAllProducts(products)
           ) : (
             <h1 className="text-danger">No products in cart</h1>
           )}
         </div>
         <div className="col-6">
+          {/* This is for stripe   */}
           <StripeCheckout products={products} setReload={setReload} />
+          <br />
+          {/* this is fo braintree */}
+          <PaymentBraintree products={products} setReload={setReload} v />
         </div>
       </div>
     </Base>
