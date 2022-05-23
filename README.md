@@ -1,4 +1,4 @@
-# projfrontend
+# projfrontend For t-shirt shop e-commerce
 
 # Getting Started with Create React App
 
